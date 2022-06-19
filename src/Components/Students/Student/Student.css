@@ -1,0 +1,293 @@
+.last-td {
+  display: flex;
+  align-items: center;
+}
+
+.last-td svg {
+  font-size: 20px;
+  transition: all 0.4s ease;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.last-td svg:hover {
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.last-td svg:first-child {
+  margin-right: 15px;
+  color: #a3a0fb !important;
+}
+
+.edit-student {
+  color: #a3a0fb !important;
+  fill: #a3a0fb;
+  cursor: pointer;
+}
+
+.xx {
+  color: #ff6161;
+  cursor: pointer;
+}
+
+.pagination {
+  float: right;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.kursatish {
+  padding: 7px 10px;
+  border: none;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all .4s ease;
+  color: #777;
+  font-weight: 600;
+}
+
+.kursatish:hover {
+  background-color: #3B86FF;
+  color: #fff;
+}
+
+.forImg {
+  display: flex;
+  align-items: center;
+
+}
+
+.forImg img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.modal-student {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 450px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 333;
+  padding: 30px;
+  display: none;
+}
+
+.modal-student-show {
+  display: block;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 280px;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(153, 153, 153, 0.192);
+  display: none;
+}
+
+.backdrop-show {
+  display: block;
+}
+
+.input-div .inp{
+  margin-left: 30px;
+}
+
+.top-header-1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.left-top1 {
+  display: flex;
+  align-items: center;
+}
+
+.left-top1 > img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.person-name h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.person-name p {
+  color: #999;
+  font-size: 18px;
+}
+
+.top-right p {
+  color: #000;
+}
+
+.top-right p span {
+  color: #666;
+}
+
+.hr {
+  margin-bottom: 30px;
+}
+
+.guruh-tahrir {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #eee;
+  width: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.guruh-qush-div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+
+}
+
+.guruh-qush-div svg {
+  color: lightgreen;
+  font-size: 25px;
+}
+
+.circle-add {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid lightgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.guruh-qush-div p {
+  color: #999;
+}
+
+.btns-saqlash {
+  display: flex;
+  float: right;
+  cursor: pointer;
+}
+
+.btns-saqlash button {
+  margin-left: 30px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .4s ease;
+  font-weight: 600;
+}
+
+.btns-saqlash button:first-child {
+  background-color: inherit;
+  border: 2px solid #3B86FF;
+  color: #3B86FF;
+  cursor: pointer;
+}
+
+.btns-saqlash button:first-child:hover {
+  background-color: #3B86FF;
+  color: #fff;
+}
+
+.btns-saqlash button:last-child {
+  background-color: #3B86FF;
+  color: #fff;
+  border: 2px solid #3B86FF;
+
+}
+
+.btns-saqlash button:last-child:hover {
+  background-color: #fff;
+  color: #3B86FF;
+}
+
+.delete-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid rgb(227, 227, 227);
+  text-align: center;
+  border-radius: 10px;
+  min-width: 250px;
+  transform: translate(-50%, -50%);
+  display: none;
+  z-index: 444;
+}
+
+.delete-modal-show {
+  display: block;
+}
+
+.delete-modal svg {
+  font-size: 50px;
+  color: rgb(148, 33, 33);
+}
+
+.btn-group-del {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.btn-group-del button {
+  padding: 7px 30px;
+  border: none;
+  transition: all .4s ease;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.btn-group-del button:first-child {
+  border: 1px solid rgb(148, 33, 33);
+  color: rgb(148, 33, 33);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btn-group-del button:first-child:hover {
+  background-color: rgb(148, 33, 33);
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+
+.btn-group-del button:last-child {
+  border: 1px solid #3B86FF;
+  color: #3B86FF;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.btn-group-del button:last-child:hover {
+  background-color: #3B86FF;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+

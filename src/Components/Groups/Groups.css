@@ -1,0 +1,23 @@
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.chekbox-flex {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: 30px;
+  width: 100%;  
+}
+
+.chekbox-flex > div {
+  width: 50%;
+}
+
+.vall {
+  width: auto;
+  text-align: left;
+  justify-content: left;
+}

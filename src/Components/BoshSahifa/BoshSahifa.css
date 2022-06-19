@@ -1,0 +1,93 @@
+.con-in {
+  width: 94%;
+  margin: auto;
+}
+
+.content h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bosh-sahifa-ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bosh-sahifa-ul a  {
+  width: 30%;
+  text-decoration: none;
+
+}
+
+.bosh-sahifa-ul li {
+  background-color: #fff;
+  list-style-type: none;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.bosh-sahifa-ul li:hover {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
+}
+
+.bosh-sahifa-ul a li h4 {
+  color: #000;
+}
+
+.bosh-sahifa-ul li p {
+  color: #999;
+  font-size: 16px;
+}
+
+.nafar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.nafar h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.nafar p {
+  color: lightgreen !important; 
+}
+
+.icon-p svg {
+  color: #8CE4FF;
+  font-size: 35px;
+}
+
+.icon-p1 svg {
+  color: #BCBAFC;
+  font-size: 35px;
+}
+
+.icon-p2 svg {
+  color: #9AEDC4;
+  font-size: 35px;
+}
+
+.bar {
+  width: 100%;
+  height: 100px;
+}
+
+.line-div {
+  width: 100% !important;
+  background-color: #fff;
+  margin-top: 30px;
+}
+
+.pie-chart {
+  margin-top: 30px;
+  width: 50%;
+  background-color: #fff;
+  float: right; 
+  padding: 20px;
+}

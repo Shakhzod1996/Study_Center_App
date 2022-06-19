@@ -1,0 +1,85 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  overflow: hidden;
+  transition: all .5s ease;
+}
+
+.header-short {
+  width: 50px;
+}
+
+.display-none {
+  display: none;
+}
+
+.header-div {
+  width: 100%;
+  color: #fff;
+  background-color: #3B86FF;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 76px;
+}
+
+.header-div svg {
+  cursor: pointer;
+}
+
+.header-ul {
+  list-style: none;
+  padding-left: 10px;
+  padding: 0px 15px 0 0; 
+}
+
+.header-ul li {
+  padding: 15px 0px 15px 15px ; 
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: all .4s ease;
+}
+
+.header-ul li:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-left: 5px solid  #3B86FF;
+  padding-left: 10px;
+}
+
+.header-ul li svg {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.header-ul li a {
+  text-decoration: none;
+}
+.header-ul li a:hover {
+  text-decoration: dashed;
+}
+
+.actived {
+  color: #444;
+  text-decoration: none;
+}
+
+.actived li {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding-left: 10px;
+  border-left: 5px solid  #3B86FF;
+}
+
+
+.nonactived {
+  color: #444;
+  text-decoration: none;
+}
