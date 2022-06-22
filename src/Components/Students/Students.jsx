@@ -4,6 +4,9 @@ import { BsSearch } from "react-icons/bs";
 import Student from "./Student/Student";
 
 import AddStudent from "./AddStudent/AddStudent";
+import { useSelector, useDispatch} from 'react-redux';
+import {  AddStudent1 } from "../../Store/RemoveSlice";
+import { NavLink } from "react-router-dom";
 
 const showDate = new Date();
 const displayToday =
@@ -19,6 +22,13 @@ export default function Students({ uquvchilarArr, short }) {
   const [guruhVal, setGuruhVal] = useState("");
   const [guruhlarVal, setGuruhlarVal] = useState("");
   const [hisobHolat, setHisobHolat] = useState("");
+
+
+  const {studentsArr} = useSelector((store) => store.remove)
+  const dispatch = useDispatch()
+
+
+
 
   const random = Math.floor(Math.random() * 100);
 
@@ -54,21 +64,10 @@ export default function Students({ uquvchilarArr, short }) {
   }
 
   const qushishHandler = (e) => {
-    console.log(e);
-    setAddStudentModal(false);
     e.preventDefault();
-    setData([
-      {
-        nomi: nomiVal,
-        raqam: raqamVal,
-        guruhId: "#" + guruhVal,
-        guruhlar: guruhlarVal,
-        hisobHolati: hisobHolat,
-        img: `https://picsum.photos/id/${random}/200/300`,
-        vaqti: displayToday,
-      },
-      ...data,
-    ]);
+    setAddStudentModal(false);
+    dispatch(AddStudent1({nomiVal, raqamVal, guruhVal, guruhlarVal, hisobHolat, random, displayToday}))
+
     setNomiVal("");
     setraqamVal("");
     setGuruhVal("");
@@ -78,14 +77,14 @@ export default function Students({ uquvchilarArr, short }) {
     setAddStudentModal(false);
   };
 
-  let parts = uquvchilarArr.length / part;
+  let parts = studentsArr.length / part;
   const newArrBtn = [];
   for (let i = 1; i <= parts; i++) newArrBtn.push(i);
   const handlerPagenation = (e, item) => {
     console.log();
     setActive(item)
     let end = (e.target.id - 1) * part;
-    let partsArr = uquvchilarArr.slice(end, part + end);
+    let partsArr = studentsArr.slice(end, part + end);
     setData(partsArr);
   };
 
@@ -113,7 +112,7 @@ export default function Students({ uquvchilarArr, short }) {
             <Student
               uquvchilarArr={uquvchilarArr}
               setData={setData}
-              data={data}
+              data={studentsArr}
               handlerPagenation={handlerPagenation}
               newArrBtn={newArrBtn}
               active={active}

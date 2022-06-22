@@ -60,7 +60,14 @@
 .forImg {
   display: flex;
   align-items: center;
+}
 
+.div-div {
+  width: 100%;
+}
+
+.nav-link {
+  width: 100%;
 }
 
 .forImg img {

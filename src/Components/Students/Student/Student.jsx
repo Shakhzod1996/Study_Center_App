@@ -19,31 +19,26 @@ import { Button, Stack, TextField } from "@mui/material";
 import EditModal from "./EditModal/EditModal";
 import styled from "styled-components";
 
+import { useDispatch } from "react-redux";
+import { RemoveItem } from "../../../Store/RemoveSlice";
+import { NavLink } from "react-router-dom";
+
 export default function Student({
-  uquvchilarArr,
   data,
   setData,
   handlerPagenation,
   newArrBtn,
-  active
+  active,
 }) {
   const [showEditModal, setShowEditModal] = useState(false);
   const [forEditArr, setForEditArr] = useState(data);
   // const [delStatus, setDelStatus] = useState(false);
   const [delRequest, setDelRequest] = useState(false);
 
-  //   const deleteItemHandler = () => {
-  //   setDelRequest(false);
+  const dispatch = useDispatch();
 
-  // };
   const deleteHandler = (id) => {
-    // setDelRequest(true);
-    if (window.confirm("Are Your Sure ?")) {
-      let removeArr = data.filter((item) => {
-        return id !== item.id;
-      });
-      setData(removeArr);
-    }
+    dispatch(RemoveItem(id));
   };
 
   const editStudentHandler = (id) => {
@@ -69,48 +64,49 @@ export default function Student({
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
-            <TableRow>
-              <TableCell>#</TableCell>
-              <TableCell>ISM</TableCell>
-              <TableCell>GURUH</TableCell>
-              <TableCell>TELEFON RAQAM</TableCell>
-              <TableCell>GURUHLAR</TableCell>
-              <TableCell>VAQTI</TableCell>
-              <TableCell>HISOB HOLATI</TableCell>
-              <TableCell></TableCell>
-            </TableRow>
+              <TableRow>
+                <TableCell>#</TableCell>
+                <TableCell>ISM</TableCell>
+                <TableCell>GURUH</TableCell>
+                <TableCell>TELEFON RAQAM</TableCell>
+                <TableCell>GURUHLAR</TableCell>
+                <TableCell>VAQTI</TableCell>
+                <TableCell>HISOB HOLATI</TableCell>
+                <TableCell></TableCell>
+              </TableRow>
           </TableHead>
           <TableBody>
             {data.map((row, i) => (
-              <TableRow
-                key={i}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {i}
-                </TableCell>
-                <TableCell>
-                  <div className="forImg">
-                    <img src={row.img} alt="img" />
-                    <p>{row.nomi}</p>
-                  </div>
-                </TableCell>
-                <TableCell>{row.guruhId}</TableCell>
-                <TableCell>{row.raqam}</TableCell>
-                <TableCell>{row.guruhlar}</TableCell>
-                <TableCell>{row.vaqti}</TableCell>
-                <TableCell>$ {row.hisobHolati}.00</TableCell>
-                <TableCell className="last-td">
-                  <MdModeEditOutline
-                    className="edit-student"
-                    onClick={() => editStudentHandler(row.id)}
-                  />
-                  <FaTimes
-                    className="xx"
-                    onClick={() => deleteHandler(row.id)}
-                  />
-                </TableCell>
-              </TableRow>
+              
+                <TableRow
+                  key={i}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {i}
+                  </TableCell>
+                  <TableCell>
+                    <div className="forImg">
+                      <img src={row.img} alt="img" />
+                      <p>{row.nomi}</p>
+                    </div>
+                  </TableCell>
+                  <TableCell>{row.guruhId}</TableCell>
+                  <TableCell>{row.raqam}</TableCell>
+                  <TableCell>{row.guruhlar}</TableCell>
+                  <TableCell>{row.vaqti}</TableCell>
+                  <TableCell>$ {row.hisobHolati}.00</TableCell>
+                  <TableCell className="last-td">
+                    <MdModeEditOutline
+                      className="edit-student"
+                      onClick={() => editStudentHandler(row.id)}
+                    />
+                    <FaTimes
+                      className="xx"
+                      onClick={() => deleteHandler(row.id)}
+                    />
+                  </TableCell>
+                </TableRow>
             ))}
           </TableBody>
         </Table>
@@ -150,7 +146,8 @@ export default function Student({
       <div className="pagination">
         {newArrBtn &&
           newArrBtn.map((item, i) => (
-            <Buttons  active={active === item}
+            <Buttons
+              active={active === item}
               className="btn-pag"
               onClick={(e) => handlerPagenation(e, item)}
               key={i}
